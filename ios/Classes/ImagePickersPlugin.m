@@ -53,6 +53,7 @@ static NSString *const CHANNEL_NAME = @"flutter/image_pickers";
         configuration.cameraProgressColor =colorType;//进度
         configuration.navBarColor =colorType;//导航栏
         configuration.navTitleColor =[UIColor whiteColor];//导航元素
+        configuration.backgroundColor=[UIColor whiteColor];
     }else{
         configuration. bottomBtnsDisableBgColor =[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:1];
         configuration.bottomBtnsNormalBgColor =[UIColor blackColor];
@@ -60,6 +61,7 @@ static NSString *const CHANNEL_NAME = @"flutter/image_pickers";
         configuration.cameraProgressColor =[UIColor blackColor];
         configuration.navBarColor =[UIColor whiteColor];
         configuration.navTitleColor =[UIColor blackColor];
+        configuration.backgroundColor=[UIColor blackColor];
     }
 }
 -(void)handleMethodCall:(FlutterMethodCall *)call result:(FlutterResult)result
@@ -356,9 +358,6 @@ static NSString *const CHANNEL_NAME = @"flutter/image_pickers";
             
         }
         
-        
-        
-        
     }
     //
     else if ([@"previewImage" isEqualToString:call.method]){
@@ -430,11 +429,6 @@ static NSString *const CHANNEL_NAME = @"flutter/image_pickers";
                     
                 }else{
                     
-                    
-                    
-                    
-                    
-                    
                     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
                     formatter.dateFormat = @"yyyyMMddHHmmss";
                     
@@ -453,10 +447,6 @@ static NSString *const CHANNEL_NAME = @"flutter/image_pickers";
                     
                     NSString  *jpgPath = [NSHomeDirectory()     stringByAppendingPathComponent:[NSString stringWithFormat:@"Documents/%@",name]];
                     //保存到沙盒
-                    
-                    
-                    
-                    
                     
                     
                     [UIImageJPEGRepresentation(image,1.0) writeToFile:jpgPath atomically:YES];

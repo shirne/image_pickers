@@ -15,7 +15,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor =[UIColor blackColor];
+    self.view.backgroundColor =[dic objectForKey:@"uiColor"].backgroundColor;
     
     ZLImageEditTool*editTool = [[ZLImageEditTool alloc] initWithEditType:ZLImageEditTypeClip image:_image configuration:_configuration];
 

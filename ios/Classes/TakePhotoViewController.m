@@ -47,11 +47,11 @@
     [super viewDidLoad];
     isDismiss =NO;
     
-    self.view.backgroundColor =[UIColor whiteColor];
+    self.view.backgroundColor =[dic objectForKey:@"uiColor"].backgroundColor;
 //    UIButton*searchView  =[[UIButton alloc]initWithFrame:CGRectMake(0,0, 230, 100)];
 //    [self.view addSubview: searchView];
 //    searchView.layer.cornerRadius =8;
-//    searchView.backgroundColor =[UIColor whiteColor];
+//    searchView.backgroundColor =[UIColor bgColor];
 //    [searchView addTarget:self action:@selector(push) forControlEvents:UIControlEventTouchUpInside];
 
     RUN_AFTER(1, ^(){
