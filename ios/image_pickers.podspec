@@ -15,14 +15,16 @@ A new flutter plugin project.
   s.license          = { :file => '../LICENSE' }
   s.author           = { 'Your Company' => 'email@example.com' }
   s.source           = { :path => '.' }
-  s.source_files = 'Classes/**/*'
+  s.source_files = 'Classes/**/*.{m,h}'
   s.public_header_files = 'Classes/**/*.h'
-  s.resources = ['Assets/*.png','Classes/AKGallery/image.bundle']
+#  s.resources = ['Assets/*.png','Classes/AKGallery/image.bundle','Classes/ZLPhotoBrowser/resource/*.{xib,bundle}']
   s.dependency 'Flutter'
   s.dependency 'AFNetworking'
-  s.dependency 'ZLPhotoBrowser-objc','1.0.4'
+  s.dependency 'SDWebImage'
+#  s.dependency 'ZLPhotoBrowser-objc','1.0.4'
   s.ios.deployment_target = '10.0'
-
+#  s.require_arc = true
+  s.framworks = 'UIKit','Photos','PhotosUI'
 
 end
 
